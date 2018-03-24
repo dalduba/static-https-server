@@ -1,0 +1,20 @@
+{
+  "name": "static-server-https",
+  "version": "1.0.0",
+  "description": "static https server based on https://gist.github.com/bencentra/909830fb705d5892b9324cffbca3926f#file-server-js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "gen-key": "openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 && openssl rsa -in key.pem -out newkey.pem && mv newkey.pem key.pem",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "https",
+    "static-server"
+  ],
+  "author": "dalduba",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
